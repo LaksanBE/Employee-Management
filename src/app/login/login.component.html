@@ -1,0 +1,23 @@
+<body class="bg" fxLayout fxLayout.xs="column">
+    <mat-card id="card" style="text-align: center;"  >
+        <mat-card-title>
+            Login
+        </mat-card-title>
+    
+        <mat-card-content>
+
+            <mat-form-field>
+                <input matInput placeholder="Name" #name >
+            </mat-form-field><br/>
+    
+            <mat-form-field>
+                <input matInput placeholder="Password" type="password" #password >
+            </mat-form-field><br/>
+                <button mat-raised-button color="primary" style="margin-right:5px;" (click)="login(name.value,password.value)">login</button>
+
+        </mat-card-content>
+    </mat-card>
+    
+</body>
+ 
+<router-outlet></router-outlet>

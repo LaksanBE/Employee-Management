@@ -1,0 +1,29 @@
+
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav opened="true" mode="side">
+      <mat-nav-list>
+        <a mat-list-item matTooltip="Assign Task to Team members" [routerLink]="['./assigntask']">Assign Task &nbsp;&nbsp;  <mat-icon> assignment </mat-icon></a>
+        <div class="dropdown">
+          <a mat-list-item  matTooltip="Display and edit Team Progress"
+         [routerLink]="['./view-progress']"> Team Progress &nbsp;&nbsp;  <mat-icon> poll </mat-icon></a>
+         <div class="dropdown-content">
+          <a (click)="openDialogForTLQuery()">View All Queries</a>
+          <a [routerLink]="['./team-progress']">Respond Queries</a>
+        </div>
+        </div>
+        <a mat-list-item  matTooltip="Display project Details"> View Project Details &nbsp;&nbsp;  <mat-icon> group </mat-icon></a>
+        <a mat-list-item  matTooltip="Display own Details"> View Personal Details &nbsp;&nbsp;  <mat-icon> person </mat-icon></a>
+        <a mat-list-item  matTooltip="Update own Details"[routerLink] = "['./update-team-leader']" >Update Personal Details  &nbsp;&nbsp;  <mat-icon> update </mat-icon></a>
+        <a mat-list-item   matTooltip="Back to Home Page" routerLink="/login">Close  &nbsp;&nbsp;  <mat-icon> close </mat-icon> </a>
+       
+      </mat-nav-list>
+    </mat-sidenav>
+    
+    <mat-sidenav-content>
+     
+      <div style="height: 88vh;">
+        <router-outlet></router-outlet>
+      
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

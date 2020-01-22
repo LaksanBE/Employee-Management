@@ -1,0 +1,16 @@
+#card {
+    margin: 0 auto;
+    width: 500px;
+    height:499px;
+  }
+#butn {
+  margin: 0 auto;
+  display: block;
+  }
+  .bg {
+    padding-top: 160px;
+    padding-bottom: 215px; 
+    width:100%;
+    height:100%;
+    
+  }

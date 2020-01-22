@@ -1,0 +1,17 @@
+<mat-toolbar color="primary" class="navbar1" sticky="true"  fxLayout fxLayout.xs="row">
+    <div class="header">
+      <img src="https://p7.hiclipart.com/preview/375/914/493/computer-icons-button-icon-design-button.jpg" alt="logo" />
+    </div>
+  <div>
+    <span  routerLink="/home"> Home &nbsp;&nbsp; </span>
+    <span  routerLink="/admin"><mat-icon> profile </mat-icon>Admin&nbsp;&nbsp; </span>
+    <span  routerLink="/leader" ><mat-icon> profile </mat-icon>Team Leader&nbsp;&nbsp; </span>
+    <span  routerLink="/member" ><mat-icon> profile </mat-icon>Team Member&nbsp;&nbsp; </span>
+  </div>
+  <div>
+    <span routerLink="/login"> Login &nbsp;&nbsp;</span>
+    <span (click)="logout()">Logout</span>
+  </div>    
+</mat-toolbar>
+
+<router-outlet></router-outlet>

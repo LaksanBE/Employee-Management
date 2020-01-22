@@ -1,0 +1,119 @@
+.navbar {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+}
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.bg-dark {
+    background-color: #254b6e !important;
+}
+.aa {
+    color: #10d8ba;
+    text-decoration: none;
+    background-color: transparent;
+}
+.logo {
+    font-weight: bolder;
+    color: var(--theme-color) !important;
+}
+.navbar-brand {
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+.navbar-dark .navbar-brand {
+    color: #fff;
+}
+button {
+    margin-right: 3rem;
+}
+div {
+    display: block;
+}
+.navbar{
+    justify-content: space-between;
+}
+span{
+    padding-right: 1rem;
+}
+.spacer {
+    flex: 1 1 auto;
+}
+table {
+    width: 100%;
+}
+.background-image {
+    height: 100vh;
+    width: 100%;
+    background: #333 url(https://d3kqdc25i4tl0t.cloudfront.net/articles/content/594_293791_Hero3.jpg) no-repeat center center fixed;
+    /* -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%; */
+    background-size: 100% 100%;
+}
+.center-align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+.image-heading {
+    text-align: center;
+    color: rgb(48, 78, 177);
+    font-family: Garamond;
+    font-size: 500%;
+    
+}
+.h1, h1 {
+    font-size: 2.5rem;
+}
+.bg-dark {
+    background-color: #343a40!important;
+}
+.navbar-expand {
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+.navbar {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+}
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+user agent stylesheet
+nav {
+    display: block;
+}

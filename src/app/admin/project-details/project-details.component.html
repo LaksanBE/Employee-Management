@@ -1,0 +1,36 @@
+<body class="bg">
+<mat-card id="card" style="text-align: center;">
+    <mat-card-title style="text-align: center; font-size: 25px; color:blue; font-weight: bold;">Project Info</mat-card-title><br>
+    <mat-card-content>
+    <form [formGroup]="project">
+
+        <mat-form-field class="full-width">
+            <input matInput placeholder="Project Id" #pid >
+        </mat-form-field><br>
+        <mat-form-field class="full-width">
+            <input matInput placeholder="Project Name" #pname >
+        </mat-form-field><br>
+        
+        <mat-form-field class="full-width">
+            <input matInput placeholder="Employee Id" #eid>
+        </mat-form-field><br>
+        <mat-form-field class="full-width">
+            <input matInput placeholder="Project Status Id" #psid>
+        </mat-form-field><br> 
+        <div ng-app="ProjectDescription" ng-controller="ProjectDesc">
+            <form>
+                Project Description:<br> <br>
+                &nbsp;&nbsp;&nbsp;
+            <textarea rows="4" cols="50" ng-model="pDescription"></textarea><br><br> 
+            </form>
+        </div>        
+        <mat-card-actions>
+            <button mat-raised-button color='primary' id="butn">Send</button>
+        </mat-card-actions>
+
+    </form>
+</mat-card-content>
+</mat-card>
+</body>
+
+<router-outlet></router-outlet>

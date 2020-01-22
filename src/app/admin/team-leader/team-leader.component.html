@@ -1,0 +1,184 @@
+<div class="example-container" align="left">
+    <p></p>
+
+  <mat-card class="example-card" align="left">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title style="font-family: sans-serif;font-weight: bolder;font-size: 30px;">Admin</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-horizontal-stepper [linear]="isLinear" #stepper>
+      <!-- INSERT DETAILS -->
+        <mat-step [stepControl]="firstFormGroup">
+          <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Insert Employee Details</ng-template>
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Employee Name" #ename>
+            </mat-form-field>
+            <p></p>
+            <label style="font-family:Arial, Helvetica, sans-serif;">Gender : &nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <mat-radio-group aria-label="Select an option" 
+              #gender (change)="onChange($event)">
+             <mat-radio-button value="male"> Male&nbsp;&nbsp;&nbsp;</mat-radio-button>
+             <mat-radio-button value="female"> Female</mat-radio-button>
+            </mat-radio-group>
+            <p></p>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Mobile" type="tel" #mob>
+            </mat-form-field>
+            <p></p>
+            <mat-form-field class="example-full-width">
+             <input matInput placeholder="Email" #email>
+            </mat-form-field>
+            <p></p>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Qualification" #qualification>
+            </mat-form-field>
+            <p></p>
+           <mat-form-field class="full-width">
+             <input matInput [matDatepicker]="picker" placeholder="Date of birth" #dob>
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+           </mat-form-field>
+            <p></p>
+            <mat-form-field class="full-width">
+             <input matInput placeholder="Experience" type="number" #exp>
+            </mat-form-field>
+            <p></p> 
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Role Id" #rid>
+            </mat-form-field>
+            <p></p>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="User Id" #uid>
+            </mat-form-field>
+            <p></p>
+            <mat-form-field class="example-full-width">
+             <input matInput placeholder="Password" type="password" #password >
+            </mat-form-field>
+            <p></p>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Password Hint" #passhint>
+            </mat-form-field>
+           <p></p>
+           <label style="font-family:Arial, Helvetica, sans-serif;">Employee Status : &nbsp;&nbsp;&nbsp;&nbsp;</label>
+           <mat-radio-group aria-label="Select an option" 
+             #estatus (change)="onStatus($event)">
+            <mat-radio-button value="active"> Active&nbsp;&nbsp;&nbsp;</mat-radio-button>
+            <mat-radio-button value="inactive">Inactive</mat-radio-button>
+           </mat-radio-group>
+           <p></p>
+            <div>
+              <button mat-raised-button color="accent" align="center" 
+                (click)="insert(ename.value,mob.value,email.value,qualification.value,dob.value,exp.value,rid.value,uid.value,password.value,passhint.value)">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+          </form>
+          </mat-step>
+          
+          <!-- UPDATE DETAILS -->
+          <mat-step [stepControl]="thirdFormGroup">
+            <form [formGroup]="thirdFormGroup">
+              <ng-template matStepLabel>Update Employee Details</ng-template>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Employee Id" #eid>
+              </mat-form-field>
+              <p></p>
+            
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Employee Name" #ename>
+              </mat-form-field>
+              <p></p>
+              
+              <label style="font-family:Arial, Helvetica, sans-serif;">Gender : &nbsp;&nbsp;&nbsp;&nbsp;</label>
+              <mat-radio-group aria-label="Select an option" 
+              #gender (change)="onChange($event)">
+             <mat-radio-button value="male"> Male&nbsp;&nbsp;&nbsp;</mat-radio-button>
+             <mat-radio-button value="female">Female</mat-radio-button>
+            </mat-radio-group>
+              <p></p>
+                
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Mobile" #mob>
+              </mat-form-field>
+              <p></p>
+              
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Email" #email>
+              </mat-form-field>
+              <p></p>
+
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Qualification" #qualification>
+              </mat-form-field>
+              <p></p>
+              
+              <mat-form-field class="full-width">
+                <input matInput [matDatepicker]="picker1" placeholder="Date of birth" #dob>
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+              </mat-form-field>
+              <p></p>
+              
+              <mat-form-field class="full-width">
+                <input matInput placeholder="Experience" #exp>
+              </mat-form-field>
+              <p></p>
+  
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Role Id" #rid>
+              </mat-form-field>
+              <p></p>
+              
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="User Id" #uid>
+              </mat-form-field>
+              <p></p>
+              
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Password" type="password" #password>
+              </mat-form-field>
+              <p></p>
+              
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Password Hint" #passhint>
+              </mat-form-field>
+              <p></p>
+                
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Project Id" #pid>
+              </mat-form-field>
+              <p></p>
+
+              <label style="font-family:Arial, Helvetica, sans-serif;">Employee Status : &nbsp;&nbsp;&nbsp;&nbsp;</label>
+           <mat-radio-group aria-label="Select an option" 
+             #estatus (change)="onStatus($event)">
+            <mat-radio-button value="active"> Active&nbsp;&nbsp;&nbsp;</mat-radio-button>
+            <mat-radio-button value="inactive">Inactive</mat-radio-button>
+           </mat-radio-group>
+           <p></p>
+                <p></p>
+              <div>
+                <button mat-raised-button color="accent" align="center" (click)="update(eid.value,ename.value,mob.value,email.value,qualification.value,dob.value,exp.value,rid.value,uid.value,password.value,passhint.value,pid.value)">Submit</button>
+              </div>
+            </form>
+          </mat-step>
+  
+          <!-- SEARCH DETAILS -->
+          <mat-step [stepControl]="fourthFormGroup">
+            <form [formGroup]="fourthFormGroup">
+              <ng-template matStepLabel>Search Employee</ng-template>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Employee Id to be searched">
+                </mat-form-field>
+                <p></p>
+  
+                <div>
+                  <button mat-raised-button color="accent" align="center" (click)="search(eid.value)">Submit</button>
+                </div>
+            </form>
+          </mat-step>
+  
+        </mat-horizontal-stepper>
+      </mat-card-content>
+    </mat-card>
+  </div>

@@ -1,0 +1,15 @@
+
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav opened="true" mode="side">
+      <mat-nav-list>
+        <a mat-list-item [routerLink]="['./displayemp']"><mat-icon> assignment </mat-icon>&nbsp;&nbsp; Employee Details  </a>
+        <a mat-list-item [routerLink]="['./empquerry']"> <mat-icon> poll </mat-icon> &nbsp;&nbsp;  Querry </a>
+        <a mat-list-item (click)="sidenav.toggle()" routerLink="/member" mat-list-item> <mat-icon> close </mat-icon>&nbsp;&nbsp;Close    </a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div style="height: 88vh;">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

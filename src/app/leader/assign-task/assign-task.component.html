@@ -1,0 +1,49 @@
+<div class="container"
+     fxLayout
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="10px"
+     fxLayoutGap.xs="0">
+
+<body class="bg" fxFlex="15%">
+    <mat-card id="card" style="text-align: center;">
+        <mat-card-title style="text-align: center; font-size: 25px; color:blue; font-weight: bold;">Assign Task</mat-card-title><br>
+    
+        <mat-card-content>
+    
+            <mat-form-field>
+                <input matInput placeholder="Employee Name">
+            </mat-form-field><br/>
+    
+            <mat-form-field>
+                <input matInput placeholder="Project Name" #projectName>
+            </mat-form-field><br/>
+
+            <mat-form-field>
+                <input matInput placeholder="Module Name" #moduleValue>
+            </mat-form-field> <br/>
+
+            <mat-form-field>
+                <input matInput [matDatepicker]="picker" placeholder="Assigned Date">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field><br/>
+            
+            <div ng-app="ProjectDescription" ng-controller="ProjectDesc">
+                <form>
+                    &nbsp;&nbsp;&nbsp;Project Description:<br> <br>
+                    &nbsp;&nbsp;&nbsp;
+                <textarea rows="4" cols="50" ng-model="pDescription"></textarea><br><br> 
+                </form>
+            </div>
+
+            <button mat-raised-button color="primary" style="margin-right:5px;" (click)="openSnackBar(modulevalue.value+' successfully')">Assign</button>
+            <button mat-raised-button color="accent" routerLink="/teamlead">Cancel</button>
+    
+        </mat-card-content>
+        </mat-card>
+    
+    </body>
+
+   
+    <router-outlet></router-outlet>

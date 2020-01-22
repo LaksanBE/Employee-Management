@@ -1,0 +1,43 @@
+.bg {
+    padding-top: 160px;
+    padding-bottom: 215px; 
+    width:100%;
+    height:100%;
+    font-family: "Bookman Old Style";
+    font-size: 100px;
+    font-style: italic;
+    font-variant: normal; 
+    font-weight: 700;
+    line-height: 40px;
+    
+  }
+span {
+    padding-right: 1rem;
+}
+
+
+#card {
+    margin: 0 auto;
+    width: 500px;
+    overflow: auto;
+    display: block;
+}
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+
+  .example-card {
+    max-width: 400px;
+    margin: 0px auto;
+    top: 100px;
+  }
+  
+  .example-width{
+    width: 80%;
+    
+  }

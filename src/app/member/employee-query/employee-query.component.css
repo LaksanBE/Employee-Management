@@ -1,0 +1,20 @@
+mat-slider {
+    width: 500px;
+  }
+.query-field {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+.full-width {
+    width: 100%;
+}
+#card {
+    margin: 0 auto;
+    width: 500px;
+    height:499px;
+}
+#butn {
+  margin: 0 auto;
+  display: block;
+}

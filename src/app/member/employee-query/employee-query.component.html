@@ -1,0 +1,64 @@
+<div class="container"
+     fxLayout
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="10px"
+     fxLayoutGap.xs="0">
+
+<mat-card id="card" fxFlex="55%">
+    <mat-card-content>
+  
+  <!-- Query field from Team Member -->
+  <h5>Enter your Query</h5>
+  <form class= "query-field">
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Query">
+   </mat-form-field>
+   <mat-card-actions>
+    <button mat-raised-button color='accent' id="butn">Send</button>
+   </mat-card-actions>
+
+  </form>
+  
+  <!-- Completed module-->
+  <h5>Enter the module you have Completed</h5>
+  <form class= "query-field">
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Completed Modules">
+  </mat-form-field>
+  </form>
+
+<!-- Progress bar-->
+<h5>Project Progress</h5>
+<mat-form-field>
+  <mat-label>Select a Progress</mat-label>
+  <mat-select [(value)]="selected">
+    <mat-option>None</mat-option>
+    <mat-option value="Initated">Initated</mat-option>
+    <mat-option value="Pending">Pending</mat-option>
+    <mat-option value="Almost Completed">Almost Completed</mat-option>
+    <mat-option value="Completed">Completed</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<p>Progress: {{selected}}</p>
+
+  
+  <!-- Difficulty Level -->
+  <h5>Difficulty Level</h5>
+  <mat-radio-group>
+    <mat-radio-button value="1">Hard</mat-radio-button><br/>
+    <mat-radio-button value="2">Medium</mat-radio-button><br/>
+    <mat-radio-button value="3">Simple</mat-radio-button><br/>
+  </mat-radio-group>
+  
+  <div id="butn" align ="center">
+  <mat-card-actions>
+    <button mat-raised-button color='accent'>Submit</button>
+    <button mat-raised-button color='accent' routerLink="/select">Cancel</button>
+    </mat-card-actions>
+  </div>
+  </mat-card-content>
+  
+  <router-outlet></router-outlet>
+  
